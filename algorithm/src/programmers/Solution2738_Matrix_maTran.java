@@ -58,14 +58,19 @@ public class Solution2738_Matrix_maTran {
             }
 
             // Output the result matrix
+            StringBuilder answer = new StringBuilder();
             for (i = 0; i < n; i++) {
                 for (int j = 0; j < m; j++) {
-                    System.out.print(result[i][j] + " ");
+                    // [i][j]를 문자열에 추가
+                    answer.append(result[i][j])
+                            .append(" ");
                 }
-                System.out.println();
+                // 한줄 추가
+                answer.append('\n');
             }
-        }
 
+            System.out.print(answer);
+        }
     }
 }
 
