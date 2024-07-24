@@ -28,4 +28,11 @@ public class MyQueue {
     public boolean isEmpty() {
         return front == rear;
     }
+
+    // Queue가 가득 차있는지 반환하는 isFull()
+    public boolean isFull() {
+        // 잘못된 포화상태 인식
+        // 가득 차지 않았는데 가득 찼다고 착각을 한다.
+        return rear == arr.length - 1;
+    }
 }
